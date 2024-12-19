@@ -122,4 +122,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Your Name - [@your_twitter](https://twitter.com/your_twitter)
 
-Project Link: [https://github.com/your-username/ecommerce-chatbot](https://github.com/your-username/ecommerce-chatbot)
+Project Link: [[https://github.com/your-username/ecommerce-chatbot](https://github.com/your-username/ecommerce-chatbot](https://github.com/juneid18/ecommerce-chatbot))
