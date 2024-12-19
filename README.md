@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-commerce Chatbot with Next.js
+
+A modern e-commerce chatbot interface built with Next.js, TypeScript, and Tailwind CSS. The chatbot helps users discover products from the Fake Store API through natural conversation.
+
+![E-commerce Chatbot](public/image.png)
+
+## Features
+
+- 🤖 Interactive chatbot interface
+- 🔍 Real-time product search
+- 📱 Responsive design (mobile & desktop)
+- 🛍️ Product grid display with images
+- ⭐ Product ratings and reviews
+- 🎨 Modern UI with Tailwind CSS
+- 💬 Smart greeting detection
+- ⚡ Fast performance with Next.js 13+
+
+## Prerequisites
+
+Before you begin, ensure you have installed:
+- Node.js 16.8 or later
+- npm or yarn
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/ecommerce-chatbot.git
+cd ecommerce-chatbot
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create `next.config.js` in the root directory:
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'fakestoreapi.com',
+        pathname: '/**',
+      },
+    ],
+  },
+}
+
+module.exports = nextConfig
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── ChatBot.tsx       # Main chatbot component
+│   ├── ChatMessage.tsx   # Individual chat message
+│   ├── ProductCard.tsx   # Product display card
+│   └── ProductGrid.tsx   # Product grid layout
+└── lib/                  # Utilities and types
+    └── types.ts          # TypeScript definitions
+```
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Start typing in the chat input at the bottom of the chatbot interface
+2. Use greetings like "hi", "hello", "hey" to start a conversation
+3. Ask about products you're interested in
+4. View product results in the grid on the left
+5. Click on products to see more details
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example queries:
+- "Show me men's clothing"
+- "I'm looking for jewelry"
+- "Do you have electronics?"
+- "Search for women's clothing"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- [Next.js 13+](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Fake Store API](https://fakestoreapi.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- [Fake Store API](https://fakestoreapi.com/) for providing the product data
+- [Next.js](https://nextjs.org/) team for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_twitter)
+
+Project Link: [https://github.com/your-username/ecommerce-chatbot](https://github.com/your-username/ecommerce-chatbot)
