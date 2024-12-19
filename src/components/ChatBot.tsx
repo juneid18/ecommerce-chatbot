@@ -27,7 +27,10 @@ const isGreeting = (text: string) => {
   const handleSend = async () => {
     if (!input.trim() || isLoading) return
   
-    const newMessages = [...messages, { role: 'user', content: input }]
+  const newMessages: ChatMessageType[] = [
+      ...messages,
+      { role: 'user', content: input } as ChatMessageType,
+    ];
     setMessages(newMessages)
     setInput('')
     setIsLoading(true)
