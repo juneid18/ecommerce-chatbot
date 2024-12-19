@@ -19,7 +19,7 @@ export default function ChatBot({ onSearch }: ChatBotProps) {
   }, [messages])
 
 // Helper function to check if input is a greeting
-const isGreeting = (text) => {
+const isGreeting = (text : string) => {
     const greetings = ['hi', 'hii', 'hey', 'hello']
     return greetings.includes(text.toLowerCase().trim())
   }
